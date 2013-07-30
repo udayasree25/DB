@@ -17,12 +17,85 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `gametest`
+-- Database: `game`
 --
 
 --
 -- Dumping data for table `answers`
 --
+
+
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `category`, `display`) VALUES
+(1, 'Geography', 1),
+(2, 'History', 1);
+
+--
+-- Dumping data for table `questions`
+--
+
+INSERT INTO `questions` (`id`, `category_id`, `title`, `text`) VALUES
+(3, 1, 'Inland Water', 'Which inland body of water is the largest on Earth?'),
+(6, 1, 'Geography', 'What is the region between the west of Alaska and the East of Russia called?'),
+(7, 1, 'Geography', 'What is the combined landmass of Africa, Europe, and Asia called?'),
+(9, 1, 'Geography', 'How wide is the English Channel at its narrowest?'),
+(10, 1, 'Geography', 'How wide is the English Channel at its widest?'),
+(11, 1, 'Geography', 'What is the name of the Mountain Range in Northern India?'),
+(12, 1, 'Geography', 'What continent is located on the South Pole of Earth?'),
+(15, 1, 'Geography', 'Brazil is located on which continent?'),
+(17, 1, 'Geography', 'Which country spans from "Sea to shining sea"?'),
+(18, 1, 'Geography', 'What country has been nicknamed the "Great White North"'),
+(19, 1, 'Geography', 'What Country has a capital city of Berlin?'),
+(20, 1, 'Geography', 'In what U.S. State is the bay named after the city of San Francisco?'),
+(22, 1, 'Geography', 'What North American River is named after a U.S. State?'),
+(23, 1, 'Geography', 'In which modern country is the Nile River located?'),
+(24, 1, 'Geography', 'Which major ocean has been referred to as "The Pond"?'),
+(26, 1, 'Geography', 'What is the Capital of Russia?'),
+(27, 1, 'Geography', 'Which African country has two smaller countries within its borders?'),
+(28, 1, 'Geography', 'Over what Russian City did a meteor explode in early 2013?'),
+(29, 1, 'Geography', 'In what U.S. State is the city colloquially known as the big apple located'),
+(30, 1, 'Geography', 'What desert is located east of the U.S. city of Los Angeles'),
+(31, 1, 'Geography', 'What is the name for the entire eastern part of Russia'),
+(32, 1, 'Geography', 'What is the name of the region consisting of Norway, Sweden, and Finland?'),
+(34, 1, 'Geography', 'What is the name of the island believed to have been sighted by Christoper Columbus in 1492?'),
+(35, 1, 'Geography', 'Which country occupies an entire continent?'),
+(36, 1, 'Geography', 'Which U.S. State has the largest population of all U.S. states?'),
+(37, 2, 'WWII', 'Which year did WW2 begin?'),
+(38, 2, 'U. S. Flag', 'What does the stripes represent on the U. S. Flag?'),
+(39, 2, 'Israelites, Egypt', 'Who led the Israelites out of Egypt?'),
+(40, 2, 'Union Army', 'Who was the most famous general of the Union Army?'),
+(41, 2, 'Sistine Chapel', 'Who painted the Sistine Chapel?'),
+(42, 2, 'Napoleon Bonaparte', 'Napoleon Bonaparte was emperor of which country?'),
+(43, 2, 'Japan, Pearl Harbor', 'In what year did Japan bomb Pearl Harbor?'),
+(44, 2, 'Macbeth', 'Who wrote Macbeth?'),
+(45, 2, 'Christopher Columbus', 'In what year did Christopher Columbus set sail to the Americas?'),
+(46, 2, 'Mongol Empire', 'Who founded the Mongol Empire?'),
+(47, 2, '95 Thesis', 'Who nailed the 95 Theses to the church door in Wittenburg, Germany?'),
+(49, 2, 'Civil Rights', 'What civil rights leader was assasinated April 4, 1968?'),
+(50, 2, 'Moon', 'Who was the first man on the moon?'),
+(51, 2, 'Famous Cartoon Characters', 'In 1983 these characters were named after famous painters and sculptors.'),
+(52, 2, 'Soviet Union', 'In what year did the Soviet Union fall?'),
+(53, 2, 'September 11, 2001', 'On September 11, 2001, terrorist launched attacks on U. S. soil using what as weapons?'),
+(54, 2, 'Stock Market Crash, Great Depression', 'In what year did the stock market crash leading to The Great Depression?'),
+(55, 2, 'Egyptians', 'The Egyptian culture emerged along which river?'),
+(57, 2, 'Japan', 'On Aug. 9, 1945, America drop an attomic bomb on these two cities in Japan?'),
+(58, 2, 'Underground Railroad', 'Nicknamed Moses, this person was the conductor of the "Undergound Railroad".'),
+(59, 2, 'Korean War', 'This line was created during the Korean War, it divides Korea into North Korea and South Korea?'),
+(60, 2, 'Vietnam', 'What event in The Vietnam War led to the unifying of Viet Cong and South Vietnam as the Socialist Republic of Vietnam? '),
+(61, 2, 'Alexander III The Great', 'Which empire did Alexander III The Great Conquer? '),
+(62, 2, 'Trojan War', 'The Trojan war began over what Queen?'),
+(63, 2, 'Troy', 'What mysterious gift was left outside the city of Troy?'),
+(64, 2, 'Operation Desert Storm', 'Which dictator invaded Kuwait in 1990 resulting in Operation Desert Storm?'),
+(65, 2, 'The Last Supper', 'This painter is famous for his work, "The Last Supper".'),
+(66, 2, 'Central America Civilization', 'What civilization came to a mysterious end in Central America and was thought to have predicted the end of the world?.'),
+(67, 2, 'Nazi Germany', 'Who was the ruler of Nazi Germany?.'),
+(70, 1, 'U.S. Border', 'What country borders the United States to the north?'),
+(71, 2, 'Discovery of Americas', 'Who is credited with the discovery of the Americas in 1492?'),
+(72, 2, '1996 US president', 'Who was president of the US in 1996?');
 
 INSERT INTO `answers` (`id`, `question_id`, `text`, `correct`) VALUES
 (13, 3, 'Lake Superior', 0),
@@ -253,78 +326,6 @@ INSERT INTO `answers` (`id`, `question_id`, `text`, `correct`) VALUES
 (290, 72, 'Clinton', 1),
 (291, 72, 'Bush Junior', 0),
 (292, 72, 'Carter', 0);
-
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`id`, `category`, `display`) VALUES
-(1, 'Geography', 1),
-(2, 'History', 1);
-
---
--- Dumping data for table `questions`
---
-
-INSERT INTO `questions` (`id`, `category_id`, `title`, `text`) VALUES
-(3, 1, 'Inland Water', 'Which inland body of water is the largest on Earth?'),
-(6, 1, 'Geography', 'What is the region between the west of Alaska and the East of Russia called?'),
-(7, 1, 'Geography', 'What is the combined landmass of Africa, Europe, and Asia called?'),
-(9, 1, 'Geography', 'How wide is the English Channel at its narrowest?'),
-(10, 1, 'Geography', 'How wide is the English Channel at its widest?'),
-(11, 1, 'Geography', 'What is the name of the Mountain Range in Northern India?'),
-(12, 1, 'Geography', 'What continent is located on the South Pole of Earth?'),
-(15, 1, 'Geography', 'Brazil is located on which continent?'),
-(17, 1, 'Geography', 'Which country spans from "Sea to shining sea"?'),
-(18, 1, 'Geography', 'What country has been nicknamed the "Great White North"'),
-(19, 1, 'Geography', 'What Country has a capital city of Berlin?'),
-(20, 1, 'Geography', 'In what U.S. State is the bay named after the city of San Francisco?'),
-(22, 1, 'Geography', 'What North American River is named after a U.S. State?'),
-(23, 1, 'Geography', 'In which modern country is the Nile River located?'),
-(24, 1, 'Geography', 'Which major ocean has been referred to as "The Pond"?'),
-(26, 1, 'Geography', 'What is the Capital of Russia?'),
-(27, 1, 'Geography', 'Which African country has two smaller countries within its borders?'),
-(28, 1, 'Geography', 'Over what Russian City did a meteor explode in early 2013?'),
-(29, 1, 'Geography', 'In what U.S. State is the city colloquially known as the big apple located'),
-(30, 1, 'Geography', 'What desert is located east of the U.S. city of Los Angeles'),
-(31, 1, 'Geography', 'What is the name for the entire eastern part of Russia'),
-(32, 1, 'Geography', 'What is the name of the region consisting of Norway, Sweden, and Finland?'),
-(34, 1, 'Geography', 'What is the name of the island believed to have been sighted by Christoper Columbus in 1492?'),
-(35, 1, 'Geography', 'Which country occupies an entire continent?'),
-(36, 1, 'Geography', 'Which U.S. State has the largest population of all U.S. states?'),
-(37, 2, 'WWII', 'Which year did WW2 begin?'),
-(38, 2, 'U. S. Flag', 'What does the stripes represent on the U. S. Flag?'),
-(39, 2, 'Israelites, Egypt', 'Who led the Israelites out of Egypt?'),
-(40, 2, 'Union Army', 'Who was the most famous general of the Union Army?'),
-(41, 2, 'Sistine Chapel', 'Who painted the Sistine Chapel?'),
-(42, 2, 'Napoleon Bonaparte', 'Napoleon Bonaparte was emperor of which country?'),
-(43, 2, 'Japan, Pearl Harbor', 'In what year did Japan bomb Pearl Harbor?'),
-(44, 2, 'Macbeth', 'Who wrote Macbeth?'),
-(45, 2, 'Christopher Columbus', 'In what year did Christopher Columbus set sail to the Americas?'),
-(46, 2, 'Mongol Empire', 'Who founded the Mongol Empire?'),
-(47, 2, '95 Thesis', 'Who nailed the 95 Theses to the church door in Wittenburg, Germany?'),
-(49, 2, 'Civil Rights', 'What civil rights leader was assasinated April 4, 1968?'),
-(50, 2, 'Moon', 'Who was the first man on the moon?'),
-(51, 2, 'Famous Cartoon Characters', 'In 1983 these characters were named after famous painters and sculptors.'),
-(52, 2, 'Soviet Union', 'In what year did the Soviet Union fall?'),
-(53, 2, 'September 11, 2001', 'On September 11, 2001, terrorist launched attacks on U. S. soil using what as weapons?'),
-(54, 2, 'Stock Market Crash, Great Depression', 'In what year did the stock market crash leading to The Great Depression?'),
-(55, 2, 'Egyptians', 'The Egyptian culture emerged along which river?'),
-(57, 2, 'Japan', 'On Aug. 9, 1945, America drop an attomic bomb on these two cities in Japan?'),
-(58, 2, 'Underground Railroad', 'Nicknamed Moses, this person was the conductor of the "Undergound Railroad".'),
-(59, 2, 'Korean War', 'This line was created during the Korean War, it divides Korea into North Korea and South Korea?'),
-(60, 2, 'Vietnam', 'What event in The Vietnam War led to the unifying of Viet Cong and South Vietnam as the Socialist Republic of Vietnam? '),
-(61, 2, 'Alexander III The Great', 'Which empire did Alexander III The Great Conquer? '),
-(62, 2, 'Trojan War', 'The Trojan war began over what Queen?'),
-(63, 2, 'Troy', 'What mysterious gift was left outside the city of Troy?'),
-(64, 2, 'Operation Desert Storm', 'Which dictator invaded Kuwait in 1990 resulting in Operation Desert Storm?'),
-(65, 2, 'The Last Supper', 'This painter is famous for his work, "The Last Supper".'),
-(66, 2, 'Central America Civilization', 'What civilization came to a mysterious end in Central America and was thought to have predicted the end of the world?.'),
-(67, 2, 'Nazi Germany', 'Who was the ruler of Nazi Germany?.'),
-(70, 1, 'U.S. Border', 'What country borders the United States to the north?'),
-(71, 2, 'Discovery of Americas', 'Who is credited with the discovery of the Americas in 1492?'),
-(72, 2, '1996 US president', 'Who was president of the US in 1996?');
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
