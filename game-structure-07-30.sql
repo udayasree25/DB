@@ -25,7 +25,7 @@ DELIMITER $$
 -- Procedures
 --
 DROP PROCEDURE IF EXISTS `check_q_num`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `check_q_num`(IN cid int)
+CREATE PROCEDURE `check_q_num`(IN cid int)
 BEGIN
   DECLARE num int default 0;
   select count(*) into num
@@ -39,7 +39,7 @@ BEGIN
 END$$
 
 DROP PROCEDURE IF EXISTS `update_scoreboard`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `update_scoreboard`(IN cid int,IN username varchar(50),IN win decimal(18,2))
+CREATE PROCEDURE `update_scoreboard`(IN cid int,IN username varchar(50),IN win decimal(18,2))
 BEGIN
 declare num int default 0;
 select count(*) into num
